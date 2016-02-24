@@ -63,7 +63,9 @@ namespace NhibernateTest
             //如果是多個 Type 可用 AddMappings
             mapper.AddMapping(typeof(ProductEntityMap));
             mapper.AddMapping(typeof(FileEntityMap));
-
+            mapper.AddMapping(typeof(UserEntityMap));
+            mapper.AddMapping(typeof(ImageEntityMap));
+            mapper.AddMapping(typeof(VideoEntityMap));
             HbmMapping mapping = mapper.CompileMappingForAllExplicitlyAddedEntities();
 
             return mapping;

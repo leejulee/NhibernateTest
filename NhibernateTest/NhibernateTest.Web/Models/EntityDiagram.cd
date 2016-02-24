@@ -13,7 +13,7 @@
   <Class Name="NhibernateTest.User">
     <Position X="4.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAgACAAAAAAAAAAAAQAAACAAAACAAAAAAAAAEA=</HashCode>
+      <HashCode>AAAAAAAgACAAAAAAAAAAAAQAAAKAAAACAAAAAAAAAEA=</HashCode>
       <FileName>Models\User.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -32,6 +32,34 @@
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAAAAAAAAQAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Models\File.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NhibernateTest.AddressInfo">
+    <Position X="1.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAIAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NhibernateTest.Admin">
+    <Position X="2" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NhibernateTest.Video">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Video.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NhibernateTest.Image">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Image.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="NhibernateTest.EntityStatus">

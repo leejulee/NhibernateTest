@@ -16,9 +16,6 @@ namespace NhibernateTest
         public virtual string Password
         { get; set; }
 
-        public virtual string Salt
-        { get; set; }
-
         public virtual bool IsSuperUser
         { get; set; }
 
@@ -26,6 +23,12 @@ namespace NhibernateTest
         { get; set; }
 
         public virtual string Email
+        { get; set; }
+
+        public virtual AddressInfo Address
+        { get; set; }
+
+        public virtual string Country
         { get; set; }
     }
 }
