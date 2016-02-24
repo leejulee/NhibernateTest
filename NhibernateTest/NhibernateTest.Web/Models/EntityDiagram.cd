@@ -16,6 +16,9 @@
       <HashCode>AAAAAAAgACAAAAAAAAAAAAQAAAKAAAACAAAAAAAAAEA=</HashCode>
       <FileName>Models\User.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Address" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="NhibernateTest.Product">
     <Position X="6.5" Y="3.25" Width="1.5" />
@@ -49,14 +52,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="NhibernateTest.Video">
-    <Position X="10.5" Y="4.5" Width="1.5" />
+    <Position X="10.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Video.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NhibernateTest.Image">
-    <Position X="12.25" Y="4.5" Width="1.5" />
+    <Position X="10.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Image.cs</FileName>
