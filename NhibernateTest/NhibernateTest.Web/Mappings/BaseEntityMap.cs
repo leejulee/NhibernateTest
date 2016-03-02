@@ -74,6 +74,23 @@ namespace NhibernateTest
         public AdminEntityMap()
         {
             this.Property(x => x.Phone);
+
+            this.Map(x => x.Settings,
+                x =>
+                {
+                    x.Table("AdminSetting");
+                    x.Key(k => k.Column("AdminId"));
+                },
+                x =>
+                {
+                    x.Element(e => e.Column("`Key`"));
+                }
+                ,
+                x =>
+                {
+                    x.Element(e => e.Column("Value"));
+                }
+                );
         }
     }
 
@@ -112,6 +129,23 @@ namespace NhibernateTest
         {
             this.DiscriminatorValue(2);
             this.Property(x => x.Length);
+        }
+    }
+
+    public class MessageMap : BaseEntityMap<int, Message>
+    {
+        public MessageMap()
+        {
+            this.Property(x => x.Content, x => x.Length(2000));
+            this.Property(x => x.Type, x => x.Type<NHibernate.Type.EnumType<MessageType>>());
+        }
+    }
+
+    public class CommentMap : BaseEntityMap<int, Comment>
+    {
+        public CommentMap()
+        {
+            this.Property(x => x.Content, x => x.Length(2000));
         }
     }
 }
