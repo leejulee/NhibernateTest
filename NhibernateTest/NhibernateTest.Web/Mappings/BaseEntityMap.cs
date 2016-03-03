@@ -58,6 +58,7 @@ namespace NhibernateTest
     {
         public UserEntityMap()
         {
+            this.Table("`User`");
             this.Property(x => x.Email);
             this.Property(x => x.Password);
 
@@ -98,6 +99,7 @@ namespace NhibernateTest
     {
         public FileEntityMap()
         {
+            this.Table("`File`");
             this.Discriminator(x =>
             {
                 x.Column("FileType");
