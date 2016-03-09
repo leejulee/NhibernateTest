@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace NhibernateTest
 {
@@ -12,10 +13,10 @@ namespace NhibernateTest
         public virtual MessageType Type
         { get; set; }
 
-        public virtual File[] Files
+        public virtual IEnumerable<File> Files
         { get; set; }
 
-        public virtual Comment[] Comments
+        public virtual IEnumerable<Comment> Comments
         { get; set; }
     }
 }

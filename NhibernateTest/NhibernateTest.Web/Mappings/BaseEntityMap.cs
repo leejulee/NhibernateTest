@@ -26,34 +26,6 @@ namespace NhibernateTest
         }
     }
 
-    public class ProductEntityMap : BaseEntityMap<int, Product>
-    {
-        public ProductEntityMap()
-        {
-            Schema("dbo");
-            this.Property(x => x.Category, map =>
-            {
-                map.NotNullable(true);
-                map.Type<NHibernate.Type.EnumType<ProductCategoryEnum>>();
-            });
-            this.Property(x => x.Name, map => map.NotNullable(true));
-            this.Property(x => x.Description, map => map.NotNullable(true));
-            this.Property(x => x.Sort, map => map.NotNullable(true));
-            //this.Address(x => x.ProductDetail, map =>
-            //{
-            //    map.Type<NHibernate.Type.XmlDocType>();
-            //    map.NotNullable(true);
-            //});
-            //this.Discriminator(x =>
-            //{
-            //    x.Column("");
-            //    x.Type<NHibernate.Type.XmlDocType>();
-            //});
-            //this.DiscriminatorValue();
-            this.Lazy(true);
-        }
-    }
-
     public class UserEntityMap : BaseEntityMap<int, User>
     {
         public UserEntityMap()
@@ -108,10 +80,20 @@ namespace NhibernateTest
 
             this.DiscriminatorValue(0);
 
-            this.Property(x => x.Name, map => map.NotNullable(true));
-            this.Property(x => x.DisplayName, map => map.NotNullable(true));
-            this.Property(x => x.Category, map => map.NotNullable(true));
-            this.Property(x => x.Sort, map => map.NotNullable(true));
+            //this.Property(x => x.Name, map => map.NotNullable(true));
+            //this.Property(x => x.DisplayName, map => map.NotNullable(true));
+            //this.Property(x => x.Category, map => map.NotNullable(true));
+            //this.Property(x => x.Sort, map => map.NotNullable(true));
+
+
+            this.Bag(x => x.Messages,
+                x =>
+                {
+                    x.Key(k => k.Column("FileId"));
+                    x.Table("MessageOfFile");
+                },
+                x => x.ManyToMany(m => m.Column("MessageId"))
+                );
         }
     }
 
@@ -134,20 +116,34 @@ namespace NhibernateTest
         }
     }
 
-    public class MessageMap : BaseEntityMap<int, Message>
+    public class MessageEntityMap : BaseEntityMap<int, Message>
     {
-        public MessageMap()
+        public MessageEntityMap()
         {
             this.Property(x => x.Content, x => x.Length(2000));
             this.Property(x => x.Type, x => x.Type<NHibernate.Type.EnumType<MessageType>>());
+            this.Bag(x => x.Comments,
+                x => x.Key(k => k.Column("MessageId")),
+                x => x.OneToMany());
+
+            this.Bag(x => x.Files,
+                x =>
+                {
+                    x.Key(k => k.Column("MessageId"));
+                    x.Table("MessageOfFile");
+                },
+                x => x.ManyToMany(m => m.Column("FileId"))
+                );
         }
     }
 
-    public class CommentMap : BaseEntityMap<int, Comment>
+    public class CommentEntityMap : BaseEntityMap<int, Comment>
     {
-        public CommentMap()
+        public CommentEntityMap()
         {
             this.Property(x => x.Content, x => x.Length(2000));
+
+            this.ManyToOne(x => x.Message, x => x.Column("MessageId"));
         }
     }
 }

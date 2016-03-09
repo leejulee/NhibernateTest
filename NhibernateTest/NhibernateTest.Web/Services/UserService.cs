@@ -7,29 +7,29 @@ using NHibernate.Linq;
 
 namespace NhibernateTest
 {
-    public class ProductService
+    public class UserService
     {
-        public IEnumerable<Product> GetAll()
+        public IEnumerable<User> GetAll()
         {
-            IEnumerable<Product> model;
+            IEnumerable<User> model;
             using (var session = NHibernateUtility.SessionFactory.OpenSession())
             {
-                model = session.Query<Product>().ToList();
+                model = session.Query<User>().ToList();
             }
             return model;
         }
 
-        public Product GetSingle(int id)
+        public User GetSingle(int id)
         {
-            Product model;
+            User model;
             using (var session = NHibernateUtility.SessionFactory.OpenSession())
             {
-                model = session.Get<Product>(id);
+                model = session.Get<User>(id);
             }
             return model;
         }
 
-        public void Insert(Product model)
+        public void Insert(User model)
         {
             model.CreateTime = DateTime.Now;
 
@@ -50,7 +50,7 @@ namespace NhibernateTest
             }
         }
 
-        public void Update(int id, Product model)
+        public void Update(int id, User model)
         {
              var soucre = GetSingle(id);
 

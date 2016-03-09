@@ -33,7 +33,7 @@
   <Class Name="NhibernateTest.File">
     <Position X="7.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAAAAAAQAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAEAAAAAAAAAIAAAAQAAQAAAAAAAAAAAAAAQAACAA=</HashCode>
       <FileName>Models\File.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -68,7 +68,7 @@
     <Position X="6.25" Y="5.75" Width="1.5" />
     <InheritanceLine Type="NhibernateTest.File" ManuallyRouted="true">
       <Path>
-        <Point X="8" Y="4.754" />
+        <Point X="8" Y="5.124" />
         <Point X="7.974" Y="4.918" />
         <Point X="7.974" Y="5.25" />
         <Point X="7" Y="5.25" />
@@ -87,17 +87,6 @@
         <Position X="0.339" Y="0.06" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="Files" Type="NhibernateTest.File" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="10.062" Y="4.2" />
-        <Point X="10.062" Y="5.25" />
-        <Point X="8" Y="5.25" />
-        <Point X="8" Y="4.754" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.339" Y="0.612" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIIA=</HashCode>
       <FileName>Models\Message.cs</FileName>
@@ -107,7 +96,6 @@
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Comments" />
-      <Property Name="Files" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="NhibernateTest.Comment">

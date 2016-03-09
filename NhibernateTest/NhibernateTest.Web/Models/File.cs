@@ -3,11 +3,15 @@ using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace NhibernateTest
 {
     public class File : BaseEntity<int>
     {
+        public virtual string Path
+        { get; set; }
+
         public virtual string Name
         { get; set; }
 
@@ -18,6 +22,9 @@ namespace NhibernateTest
         { get; set; }
 
         public virtual int Sort
+        { get; set; }
+
+        public virtual IEnumerable<Message> Messages
         { get; set; }
     }
 }
