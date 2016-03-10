@@ -20,20 +20,10 @@
       <Property Name="Address" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="NhibernateTest.Product">
-    <Position X="5" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAQAAQAAAABAAAAAAAAAAAACAA=</HashCode>
-      <FileName>Models\Product.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Category" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="NhibernateTest.File">
     <Position X="7.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAIAAAAQAAQAAAAAAAAAAAAAAQAACAA=</HashCode>
+      <HashCode>AAAAEAAAAAAAAAIAAAAQAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Models\File.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -66,15 +56,6 @@
   </Class>
   <Class Name="NhibernateTest.Image">
     <Position X="6.25" Y="5.75" Width="1.5" />
-    <InheritanceLine Type="NhibernateTest.File" ManuallyRouted="true">
-      <Path>
-        <Point X="8" Y="5.124" />
-        <Point X="7.974" Y="4.918" />
-        <Point X="7.974" Y="5.25" />
-        <Point X="7" Y="5.25" />
-        <Point X="7" Y="5.75" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Image.cs</FileName>
@@ -118,13 +99,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAAAACAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\EntityStatus.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="NhibernateTest.ProductCategoryEnum">
-    <Position X="4.5" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAIAAAAAAABAAAAAAAAAAAAgAAAAEAAAAg=</HashCode>
-      <FileName>Enums\ProductCategoryEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="NhibernateTest.MessageType">
