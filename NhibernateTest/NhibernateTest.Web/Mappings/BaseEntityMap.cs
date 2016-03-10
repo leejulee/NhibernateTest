@@ -86,14 +86,14 @@ namespace NhibernateTest
             //this.Property(x => x.Sort, map => map.NotNullable(true));
 
 
-            this.Bag(x => x.Messages,
-                x =>
-                {
-                    x.Key(k => k.Column("FileId"));
-                    x.Table("MessageOfFile");
-                },
-                x => x.ManyToMany(m => m.Column("MessageId"))
-                );
+            //this.Bag(x => x.Messages,
+            //    x =>
+            //    {
+            //        x.Key(k => k.Column("FileId"));
+            //        x.Table("MessageOfFile");
+            //    },
+            //    x => x.ManyToMany(m => m.Column("MessageId"))
+            //    );
         }
     }
 
