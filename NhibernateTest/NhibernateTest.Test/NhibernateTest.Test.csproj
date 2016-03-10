@@ -99,7 +99,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="UnitTestNhibernate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -109,13 +109,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NhibernateTest.Web\NhibernateTest.Web.csproj">
-      <Project>{e807a027-c6cf-4c56-8cbf-3ea058ed83e3}</Project>
-      <Name>NhibernateTest.Web</Name>
-    </ProjectReference>
+    <Folder Include="Log\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Log\" />
+    <ProjectReference Include="..\NhibernateTest.Common\NhibernateTest.Common.csproj">
+      <Project>{c012cba6-2619-4dce-aa45-f1dac78544ba}</Project>
+      <Name>NhibernateTest.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NhibernateTest.Service\NhibernateTest.Service.csproj">
+      <Project>{a527ba19-e70e-4e98-a664-c811de1321f9}</Project>
+      <Name>NhibernateTest.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

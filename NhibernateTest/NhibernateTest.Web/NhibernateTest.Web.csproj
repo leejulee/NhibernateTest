@@ -112,31 +112,18 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Comment.cs" />
-    <Compile Include="Models\Message.cs" />
-    <Compile Include="Models\MessageType.cs" />
-    <Compile Include="Models\Image.cs" />
-    <Compile Include="Models\Admin.cs" />
-    <Compile Include="Models\Address.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Enums\EntityStatus.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Mappings\BaseEntityMap.cs" />
-    <Compile Include="Models\BaseEntity.cs" />
-    <Compile Include="Models\File.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Utilities\NhibernateHelper.cs" />
-    <Compile Include="Models\Video.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="Models\EntityDiagram.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -147,6 +134,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NhibernateTest.Common\NhibernateTest.Common.csproj">
+      <Project>{c012cba6-2619-4dce-aa45-f1dac78544ba}</Project>
+      <Name>NhibernateTest.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NhibernateTest.Service\NhibernateTest.Service.csproj">
+      <Project>{a527ba19-e70e-4e98-a664-c811de1321f9}</Project>
+      <Name>NhibernateTest.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

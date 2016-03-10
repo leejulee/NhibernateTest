@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Collections;
-//using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate.Cfg;
 using NHibernate.Bytecode;
@@ -13,7 +12,7 @@ using NHibernate.Mapping.ByCode;
 namespace NhibernateTest.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestNhibernate
     {
         private static NHibernate.ISessionFactory Init()
         {
@@ -44,7 +43,7 @@ namespace NhibernateTest.Test
         }
 
         [TestMethod]
-        public void initialization()
+        public void Initialization()
         {
             Init();
         }
