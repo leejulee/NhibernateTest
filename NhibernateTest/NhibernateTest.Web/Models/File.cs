@@ -24,7 +24,7 @@ namespace NhibernateTest
         public virtual int Sort
         { get; set; }
 
-        public virtual IEnumerable<Message> Messages
+        public virtual IList<Message> Messages
         { get; set; }
     }
 }

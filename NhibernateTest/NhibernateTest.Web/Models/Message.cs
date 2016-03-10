@@ -13,10 +13,10 @@ namespace NhibernateTest
         public virtual MessageType Type
         { get; set; }
 
-        public virtual IEnumerable<File> Files
+        public virtual IList<File> Files
         { get; set; }
 
-        public virtual IEnumerable<Comment> Comments
+        public virtual IList<Comment> Comments
         { get; set; }
     }
 }

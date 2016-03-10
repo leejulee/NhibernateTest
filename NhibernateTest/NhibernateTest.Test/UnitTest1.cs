@@ -74,7 +74,7 @@ namespace NhibernateTest.Test
 
                 Console.WriteLine("Lazy Load");
 
-                Assert.AreEqual(2, message.Comments.Count());
+                Assert.AreEqual(2, message.Comments.Count);
             }
         }
     }

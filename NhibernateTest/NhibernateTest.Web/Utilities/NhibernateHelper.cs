@@ -42,7 +42,7 @@ namespace NhibernateTest
                 // 資料庫選用 SQLite
                 c.Dialect<MsSql2012Dialect>();
                 // 取用 .config 中的 "NhibernateMssqlDb" 連線字串
-                //c.ConnectionStringName = "NhibernateMssqlDb";
+                c.ConnectionStringName = "NhibernateMssqlDb";
 
                 // Schema 變更時的處置方式
                 c.SchemaAction = SchemaAutoAction.Create;
