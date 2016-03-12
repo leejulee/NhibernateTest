@@ -99,6 +99,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="UnitTestCascade.cs" />
     <Compile Include="UnitTestNhibernate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

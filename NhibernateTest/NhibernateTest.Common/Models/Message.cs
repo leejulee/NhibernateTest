@@ -4,6 +4,12 @@ namespace NhibernateTest
 {
     public class Message : BaseEntity<int>
     {
+        public Message()
+        {
+            this.Comments = new List<Comment>();
+            this.Files = new List<File>();
+        }
+
         public virtual string Content
         { get; set; }
 
@@ -15,5 +21,9 @@ namespace NhibernateTest
 
         public virtual IList<Comment> Comments
         { get; set; }
+
+        //可配合Nhibernate List 對應(非必要在map設定屬性)
+        //public virtual int Sort
+        //{ get; set; }
     }
 }
