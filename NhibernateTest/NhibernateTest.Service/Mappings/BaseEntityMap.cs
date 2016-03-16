@@ -30,7 +30,8 @@ namespace NhibernateTest
     {
         public UserEntityMap()
         {
-            this.Table("`User`");
+            //改用 Hbm2DDLKeyWords.AutoQuote 可不用自已寫關鍵字處理
+            //this.Table("`User`");
             this.Property(x => x.Email);
             this.Property(x => x.Password);
 
@@ -72,7 +73,8 @@ namespace NhibernateTest
     {
         public FileEntityMap()
         {
-            this.Table("`File`");
+            //改用 Hbm2DDLKeyWords.AutoQuote 可不用自已寫關鍵字處理
+            //this.Table("`File`");
             this.Discriminator(x =>
             {
                 x.Column("FileType");

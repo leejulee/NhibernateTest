@@ -53,16 +53,30 @@ namespace NhibernateTest.Test
         {
             var factory = Init();
             Console.WriteLine("Create Message Info");
+
             using (var session = factory.OpenSession())
             {
-                var message = new Message()
+                using (var trans = session.BeginTransaction())
                 {
-                    Content = "Leoli"
-                };
-                session.Save(message);
-                session.Save(new Comment() { Message = message, Content = "Hi" });
-                session.Save(new Comment() { Message = message, Content = "Nhibernate" });
+                    try
+                    {
+                        var message = new Message()
+                        {
+                            Content = "Leoli"
+                        };
+                        session.Save(message);
+                        session.Save(new Comment() { Message = message, Content = "Hi" });
+                        session.Save(new Comment() { Message = message, Content = "Nhibernate" });
+                        trans.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        trans.Rollback();
+                    }
+                }
             }
+
 
             Console.WriteLine("Select Message Info");
             using (var session = factory.OpenSession())

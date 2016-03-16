@@ -49,6 +49,9 @@ namespace NhibernateTest
 
                 // 交易隔離等級
                 c.IsolationLevel = IsolationLevel.ReadCommitted;
+                
+                //關鍵字自動加上`tableName`(反引號`)
+                c.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
             });
 
             // 取得Mapping
