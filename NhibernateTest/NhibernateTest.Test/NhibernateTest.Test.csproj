@@ -99,6 +99,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="UnitTestCfgXml.cs" />
     <Compile Include="UnitTestCascade.cs" />
     <Compile Include="UnitTestNhibernate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +122,12 @@
       <Project>{a527ba19-e70e-4e98-a664-c811de1321f9}</Project>
       <Name>NhibernateTest.Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\NhibernateTest.Web\App_Data\Hibernate.cfg.xml">
+      <Link>Hibernate.cfg.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
