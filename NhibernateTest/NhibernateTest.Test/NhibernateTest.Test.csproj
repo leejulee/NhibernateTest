@@ -99,6 +99,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="InternalHelper.cs" />
+    <Compile Include="UnitTestEvent.cs" />
     <Compile Include="UnitTestCfgXml.cs" />
     <Compile Include="UnitTestCascade.cs" />
     <Compile Include="UnitTestNhibernate.cs" />

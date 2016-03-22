@@ -16,10 +16,16 @@ namespace NhibernateTest
             this.Property(x => x.Creator, map =>
             {
                 map.Length(200);
-                map.Access(Accessor.ReadOnly);
+                //Test EventListener mark
+                //map.Access(Accessor.ReadOnly);
             });
             this.Property(x => x.CreateTime, map => map.NotNullable(true));
-            this.Property(x => x.LasEditor, map => map.Formula("Creator + 'Test'"));
+            //Test EventListener mark
+            //Sqlite string Concatenate
+            //this.Property(x => x.LastEditor, map => map.Formula("Creator || ' Test'"));
+            //Mssql string Concatenate
+            //this.Property(x => x.LastEditor, map => map.Formula("Creator + 'Test'"));
+            this.Property(x => x.LastEditor);
             this.Property(x => x.LastTime);
             this.Property(x => x.EntityStatus, map => map.Column("Valid"));
 
