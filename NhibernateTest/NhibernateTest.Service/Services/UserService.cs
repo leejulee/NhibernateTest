@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using NHibernate;
 using NHibernate.Linq;
+using NhibernateTest.Service;
 
 namespace NhibernateTest
 {
-    public class UserService
+    public class UserService : IUserService
     {
         public IEnumerable<User> GetAll()
         {

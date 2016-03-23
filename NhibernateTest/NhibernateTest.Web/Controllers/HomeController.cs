@@ -8,16 +8,17 @@ namespace NhibernateTest.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private UserService _prodcutService;
+        private UserService _userService;
         
         public HomeController()
         {
-            this._prodcutService = new UserService();
+            this._userService = new UserService();
         }
         // GET: Home
         public ActionResult Index()
         {
-            var models = _prodcutService.GetAll();
+            ServiceFactory.MessageService.Add(new Message());
+            var models = _userService.GetAll();
             return Content("Ok");
         }
     }
