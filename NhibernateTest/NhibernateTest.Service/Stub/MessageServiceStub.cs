@@ -33,5 +33,15 @@ namespace NhibernateTest
         {
             throw new NotImplementedException();
         }
+
+        public Message GetByUser(string userName)
+        {
+            return new Message()
+            {
+                Creator = userName,
+                Id = 1,
+                Content = "stubContent"
+            };
+        }
     }
 }

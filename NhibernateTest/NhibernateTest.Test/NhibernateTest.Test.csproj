@@ -104,6 +104,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="InternalHelper.cs" />
+    <Compile Include="UnitTestSession.cs" />
     <Compile Include="UnitTestMockWithStub.cs" />
     <Compile Include="UnitTestService.cs" />
     <Compile Include="UnitTestEvent.cs" />

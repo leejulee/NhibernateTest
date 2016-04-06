@@ -33,5 +33,12 @@ namespace NhibernateTest.Test
             var comment = ServiceFactory.CommentService.Get(1);
             Assert.AreEqual(comment.Content, "Hi,Leo");
         }
+
+        [TestMethod]
+        public void TestStubMessage_GetByUser()
+        {
+            var message = ServiceFactory.MessageService.GetByUser("leoli");
+            Assert.AreEqual(message.Creator, "leoli");
+        }
     }
 }
